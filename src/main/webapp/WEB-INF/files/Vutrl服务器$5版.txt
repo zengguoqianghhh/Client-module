@@ -1,0 +1,29 @@
+Tokyo
+
+IP Address:45.77.27.34
+Username: root 
+Port: 8999
+Password: Azengjiaolongajin0
+Encryption: aes-256-cfb
+
+//以下是给别人用的端口
+IP Address:45.77.27.34
+Port：8989
+Password:Zheshi8989demima
+Encryption: aes-256-cfb
+
+Shadowsocks-Python Server
+
+ //以下亲测有用连接
+https://segmentfault.com/a/1190000015558387
+https://juejin.im/post/5b90cd21f265da0a9145215b
+http://tool.chinaz.com/port 	//用于扫描端口22是否有用，不要去尝试自己开SSH
+http://www.iyu.co/share/tcp-bbr/	//VPS加速
+https://my.oschina.net/u/1167564/blog/851680	//多用户
+
+http://www.mamicode.com/info-detail-2375720.html //上传文件
+
+关键步骤
+wget --no-check-certificate -O shadowsocks.sh https://raw.githubusercontent.com/teddysun/shadowsocks_install/master/shadowsocks.sh
+chmod +x shadowsocks.sh
+./shadowsocks.sh 2>&1 | tee shadowsocks.log

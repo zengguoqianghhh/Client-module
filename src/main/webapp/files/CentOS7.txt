@@ -1,0 +1,53 @@
+mysql -u root -p
+Root!!2019
+
+ss -lnp | grep port
+ps -ef | grep pid
+->show databases;
+->create database db_name;
+->use database
+->drop database db_name;
+->show tables 
+->DROP TABLE table_name ;
+->DELETE FROM table_name;
+
+安装上传设置
+#yum  install lrzsz
+
+安装nginx
+#rpm -Uvh http://nginx.org/packages/centos/7/noarch/RPMS/nginx-release-centos-7-0.el7.ngx.noarch.rpm
+#yum install -y nginx
+#systemctl start nginx.service
+访问 IP 查看实现了没有 
+
+安装mysql //记得设置数据库默认编码以及允许远程访问
+#wget 'https://dev.mysql.com/get/mysql57-community-release-el7-11.noarch.rpm'
+#rpm -Uvh mysql57-community-release-el7-11.noarch.rpm
+#yum install mysql-community-server
+#grep 'temporary password' /var/log/mysqld.log
+
+#mysql -u root -p
+
+->ALTER USER 'root'@'localhost' IDENTIFIED BY 'Root!!2019';
+
+    mysql> use mysql; 
+    mysql> update user set host = '%' where user = 'root'; 
+    mysql> select host, user from user;
+#安装jdk 
+
+#安装redis
+#yum install epel-release
+#yum update
+#yum -y install redis
+#systemctl start redis
+#vi /etc/redis.conf //配置路径
+##bind 127.0.0.1  //注释这一条
+#requirepass foobared //取消注释这一条 设置密码123456
+
+安装RabbitMQ
+rabbitmq-plugins enable rabbitmq_management
+
+https://ken.io/note/centos7-rabbitmq-install-setup
+https://blog.csdn.net/weixin_34004750/article/details/87107153
+初始用 https://www.jianshu.com/p/79ca08116d57
+https://blog.csdn.net/lyhkmm/article/details/78775369
